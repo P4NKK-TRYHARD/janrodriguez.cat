@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M0227 | Enterprise Network Lab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estils_JanRodriguez.css">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-terminal"></i>
+            <span>NETWORK<b>LAB</b></span>
+        </div>
+        <nav>
+            <a href="#monitoratge">Serveis</a>
+            <a href="#arquitectura">Arquitectura</a>
+            <a href="#roadmap">Metodologia</a>
+            <a href="#seguretat">Seguretat</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero reveal">
+            <h1>Serveis en Xarxa <span class="text-gradient">M0227</span></h1>
+            <p>Infraestructura crítica, protocols de comunicació i administració de servidors SMX.</p>
+            <div class="hero-stats">
+                <div class="stat-item"><span>15+</span><p>Protocols</p></div>
+                <div class="stat-item"><span>100%</span><p>Uptime</p></div>
+                <div class="stat-item"><span>Linux/Win</span><p>OS</p></div>
+            </div>
+        </section>
+
+        <section id="monitoratge" class="section-title reveal">
+            <h2><i class="fas fa-server"></i> Catàleg de Serveis Core</h2>
+        </section>
+
+        <div class="dashboard-grid">
+            <article class="card reveal">
+                <div class="card-icon cyan"><i class="fas fa-network-wired"></i></div>
+                <h3>DHCP (Dynamic Host)</h3>
+                <p>Configuració de servidors per a l'assignació dinàmica. Gestió d'àmbits, exclusions i reserves basades en MAC.</p>
+                <div class="tag">UDP 67/68</div>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-icon pink"><i class="fas fa-search"></i></div>
+                <h3>DNS (Domain Name)</h3>
+                <p>Resolució de noms mitjançant zones directes i inverses. Configuració de reenviadors i registres A, CNAME i MX.</p>
+                <div class="tag">UDP/TCP 53</div>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-icon purple"><i class="fas fa-globe"></i></div>
+                <h3>HTTP/HTTPS (Web)</h3>
+                <p>Desplegament de llocs web segurs. Configuració de Virtual Hosts en Apache i securització amb SSL/TLS.</p>
+                <div class="tag">TCP 80/443</div>
+            </article>
+
+            <article class="card reveal">
+                <div class="card-icon cyan"><i class="fas fa-file-import"></i></div>
+                <h3>FTP (File Transfer)</h3>
+                <p>Servidors de transferència de fitxers amb accés anònim o autenticat. Ús de vsftpd i clients FileZilla.</p>
+                <div class="tag">TCP 20/21</div>
+            </article>
+        </div>
+
+        <section id="arquitectura" class="architecture reveal">
+            <div class="arch-content">
+                <h2>Arquitectura de Xarxa</h2>
+                <p>En el mòdul M0227 treballem principalment amb el model <strong>Client-Servidor</strong>. El servidor centralitza els recursos i serveis, mentre que els clients realitzen peticions mitjançant el stack de protocols TCP/IP.</p>
+                <div class="arch-grid">
+                    <div class="arch-box">
+                        <i class="fas fa-layer-group"></i>
+                        <h4>Capa d'Aplicació</h4>
+                        <p>On resideixen els protocols com HTTP, FTP i DNS.</p>
+                    </div>
+                    <div class="arch-box">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>Capa de Transport</h4>
+                        <p>Gestió de dades mitjançant segments TCP o datagrames UDP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="roadmap reveal">
+            <h2 class="center">Fases de Desplegament</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time-num">01</div>
+                    <div class="time-content">
+                        <h3>Planificació IP</h3>
+                        <p>Disseny de l'esquema d'adreçament, subxarxes i màscares.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-num">02</div>
+                    <div class="time-content">
+                        <h3>Instal·lació de Rols</h3>
+                        <p>Instal·lació dels binaris i dependències del servei (apt/yum).</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time-num">03</div>
+                    <div class="time-content">
+                        <h3>Configuració i Test</h3>
+                        <p>Edició de fitxers .conf i validació de la sintaxi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="seguretat" class="content-split reveal">
+            <div class="text-block">
+                <h2>Hardening i Seguretat</h2>
+                <p>Qualsevol servei en xarxa ha d'estar protegit contra accessos no autoritzats:</p>
+                <ul class="custom-list">
+                    <li><i class="fas fa-user-shield"></i> <strong>ACLs:</strong> Llistes de control d'accés per IP.</li>
+                    <li><i class="fas fa-lock"></i> <strong>SSH:</strong> Administració remota xifrada.</li>
+                    <li><i class="fas fa-bug"></i> <strong>Logs:</strong> Monitoratge actiu de fitxers de registre.</li>
+                </ul>
+            </div>
+            <div class="stats-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Servei</th>
+                            <th>Protocol</th>
+                            <th>Seguretat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Accés Remot</td><td>SSH (22)</td><td>Alta (Xifrat)</td></tr>
+                        <tr><td>Transferència</td><td>SFTP (22)</td><td>Alta (SSH)</td></tr>
+                        <tr><td>Web</td><td>HTTPS (443)</td><td>Mitja (SSL)</td></tr>
+                        <tr><td>Correu</td><td>IMAPS (993)</td><td>Alta (TLS)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="terminal" class="reveal">
+            <h2 class="center"><i class="fas fa-code"></i> Consola d'Administració</h2>
+            <div class="terminal-container">
+                <div class="term-header">
+                    <div class="term-dots">
+                        <span class="dot-red"></span>
+                        <span class="dot-yellow"></span>
+                        <span class="dot-green"></span>
+                    </div>
+                    <div class="term-title">p4nkk@p4nkk: ~</div>
+                </div>
+                <div class="term-body">
+                    <p><span class="p-success">● Welcome to Enterprise Network Lab Terminal</span></p>
+                    <p>Escribe 'help' para ver los comandos disponibles.</p>
+                    <div id="history"></div> <div class="input-line">
+                    <span class="p-user">p4nkk@p4nkk:~$</span>
+                    <input type="text" id="terminal-input" autofocus spellcheck="false">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolupat per <strong>Jan Rodriguez</strong> | Alumne de SMX - M0227 | 2026</p>
+    </footer>
+<script>
+    const input = document.getElementById('terminal-input');
+    const history = document.getElementById('history');
+    const terminalBody = document.getElementById('terminal-body');
+
+    // Diccionario de comandos y respuestas
+    const commands = {
+        "help": "Comandos disponibles: help, status, nmap, clear, ip addr, date",
+        "status": "<span class='p-success'>● bind9.service - Active (running)</span><br><span class='p-success'>● apache2.service - Active (running)</span>",
+        "nmap": "Scanning 192.168.1.0/24... <br>Host 192.168.1.1 (Gateway) is UP.<br>Host 192.168.1.10 (Server) is UP.",
+        "ip addr": "eth0: <BROADCAST,MULTICAST,UP> mtu 1500<br>inet 192.168.1.50/24 brd 192.168.1.255",
+        "date": new Date().toString(),
+        "clear": "clear"
+    };
+
+    input.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') {
+            const fullCommand = input.value.trim().toLowerCase();
+            
+            if (fullCommand === "") return;
+
+            // 1. Mostrar lo que el usuario escribió
+            const commandLine = document.createElement('p');
+            commandLine.innerHTML = `<span class="p-user">p4nkk@p4nkk:~$</span> <span class="p-command">${fullCommand}</span>`;
+            history.appendChild(commandLine);
+
+            // 2. Lógica de comandos
+            if (fullCommand === "clear") {
+                history.innerHTML = "";
+            } else {
+                const response = document.createElement('span');
+                response.className = "p-response";
+                response.innerHTML = commands[fullCommand] || `command not found: ${fullCommand}`;
+                history.appendChild(response);
+            }
+
+            // 3. Resetear y hacer scroll
+            input.value = "";
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+    });
+
+    // Mantener el foco en el input al hacer click en la terminal
+    terminalBody.addEventListener('click', () => input.focus());
+</script>
+</body>
+</html>
